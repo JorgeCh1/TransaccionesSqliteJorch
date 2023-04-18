@@ -48,8 +48,8 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == newNombreActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.getStringExtra(NewNombreActivity.EXTRA_REPLY)?.let { reply ->
-                val word = Nombre(reply)
-                NombreViewModel.insert(word)
+                val nombre = Nombre(reply)
+                NombreViewModel.insert(nombre)
             }
         } else {
             Toast.makeText(
